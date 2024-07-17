@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <a href="#">
+            <img src="imagenes/logo.svg" alt="logo_alura" class="logo">
+        </a>
+    </header>
+    <!-- Parte principal -->
+    <main>
+       <!-- Seccion encriptar-->
+       <section class="encriptador">
+        <textarea class="encriptar" placeholder="Ingrese el texto aqui"></textarea>
+        <div class="encriptador-aviso">
+            <img src="imagenes/aviso.svg" alt="imagen-aviso" class="img-aviso">
+            <p class="texto-aviso">Solo letras minusculas y sin acentos</p>
+           </div>
+           <div class="encriptador-contenedor">
+            <button type="submit" class="btn-encriptar">Encriptar</button>
+            <button type="submit" class="btn-desencriptar">Desencriptar</button>
+        </div>
+       </section>
+       <!-- Seccion desencriptar-->
+       <section class="tarjeta">
+        <div class="tarjeta-contenedor">
+            <img src="imagenes/muñeco.svg" alt="imagen-muñeco" class="img-muñeco">
+            <p class="texto-uno">Ningun mensaje fue encontrado</p>
+            <p class="texto-dos">Ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
+        <textarea type="mensaje" class="evaluar" readonly></textarea>
+        <button type="submit" class="btn-copiar">Copiar</button>
+       </section> 
+    </main>
+<!-- Footer -->
+<footer>
+    <p class="copyright">&copy; 2024 -Encriptador de Texto, desarrollado por Veronique!</p>
+    <a href="https://www.linkedin.com/in/veronica-isabel-pereira/" target="_blank">
+        <img src="imagenes/linkedin.svg" alt="linkedin" class="linked"></a>
+        <a href="https://github.com/veronicaisabelpereira" target="_blank">
+            <img src="imagenes/github.svg" alt="github" class="git"></a>
+</footer>
+<script src="js/encriptar.js"></script>
+</body>
+</html>
