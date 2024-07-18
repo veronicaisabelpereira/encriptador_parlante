@@ -7,6 +7,9 @@ const txEncriptar = document.querySelector(".encriptar");//Texto ingresado por e
 const aviso = document.querySelector(".texto-aviso");//Avisos
 const tarjeta = document.querySelector(".tarjeta-contenedor");//Contenedor de imagen y 2 parrafos del lado derecho
 const resultado = document.querySelector(".evaluar"); //Textarea de resultado
+const btnParlante = document.querySelector(".parlante");//Boton de parlante
+const tarjetaDos = document.querySelector(".tarjeta");//Contenedor de imagen y 2 parrafos del lado derecho
+
 //
 
 function validar(){
@@ -46,6 +49,7 @@ function validar(){
 function mostrarTextoProcesado(text) {
     resultado.innerHTML = text;
     btnCopiar.style.visibility = "inherit";
+    btnParlante.style.visibility = "inherit";
     tarjeta.remove()
 }
 //
@@ -94,6 +98,7 @@ btnEncriptar.addEventListener("click", e=>{
     e.preventDefault();
 if (validar()){
     encriptar()
+    tarjetaDos.style.background = "#E5E5E5";
 }
   
   });
@@ -101,12 +106,14 @@ if (validar()){
       e.preventDefault();
       if (validar()){
         desencriptar()
+        tarjetaDos.style.background = "#E5E5E5";
     }
 
   });
   btnCopiar.addEventListener("click", e=>{
       e.preventDefault();
       copiar();
+      tarjetaDos.style.background = "#E5E5E5";
   });
 
 //Vacia el campo de resultado cuando el usuario borra el campo de texto
@@ -115,3 +122,14 @@ if (validar()){
         mostrarTextoProcesado("")
     }
 });
+
+
+
+btnParlante.addEventListener("click", e => {
+    e.preventDefault();
+    console.log("funciona")
+    const voz = resultado.value
+    tarjetaDos.style.background = "#0a38718a";
+    responsiveVoice.speak(voz, "Spanish Female", {pitch: 0.2, rate: 0.8});
+})
+
